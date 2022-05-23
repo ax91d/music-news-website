@@ -1,0 +1,30 @@
+.contact-wrap{
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #FDFBFB;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-heading {
+    text-align: center;
+    align-self: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: 'Varela', sans-serif;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    width: 80px;
+}
+
+.contact-text{
+    font-family: 'Varela', sans-serif;
+}
+
+.contact-text::first-letter{
+    margin-left: 30px;
+    font-size: 23px;
+}

@@ -1,0 +1,32 @@
+.about-wrap{
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #FDFBFB;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-heading {
+    text-align: center;
+    align-self: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: 'Varela', sans-serif;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    width: 80px;
+}
+
+.about-text{
+    font-family: 'Varela', sans-serif;
+    margin-bottom: 20px;
+    line-height: 2.5;
+}
+
+.about-text::first-letter{
+    margin-left: 30px;
+    font-size: 23px;
+}
