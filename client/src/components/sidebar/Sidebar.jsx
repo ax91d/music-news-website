@@ -21,8 +21,8 @@ export default function Sidebar() {
           alt=""
         />
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit illum,
-          ad odio sed quae accusamus explicabo natus.
+          We have premieres of albums and clips of rappers and rock-n-roll artists, we are faster than
+          all foreign important news and share them with readers.
         </p>
       </div>
       <div className="sidebarItem">
