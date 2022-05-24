@@ -61,3 +61,33 @@
     cursor: pointer;
     font-size: 16px;
 }
+
+
+@media screen and (max-width: 900px) {
+    .writeFormGroup{
+        margin-left:20px;
+        width: 90%;
+
+    }
+
+    .writeImg{
+        margin-left: 20px;
+        width: 330px;
+        height: 200px;
+    }
+    .writeInput{
+        width: 150px;
+    }
+
+    .writeText{
+        font-size: 20px;
+        height: 300px;
+        width: 70%;
+    }
+
+    /* textarea.writeInput{
+        font-size: 20px;
+        padding: 20px;
+        width: 90%;
+    } */
+}

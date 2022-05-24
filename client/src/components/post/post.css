@@ -54,3 +54,25 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
+
+
+@media screen and (max-width: 400px){
+    .post {
+        width: 400px;
+    }
+    .postImg{
+        width: 100%;
+    }
+    .postImg{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1439px){
+    .post {
+        width: 250px;
+    }
+    .postImg{
+        width: 100%;
+    }
+}

@@ -1,8 +1,14 @@
 import React from "react";
 import "./about.css";
+import {AnimatePresence, motion } from "framer-motion";
 
 export default function About() {
   return (
+    <motion.div
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        exit={{ scaleY: 0 }}
+      >
     <div className="about-wrap">
       <div className="about-heading">
         {" "}
@@ -19,5 +25,6 @@ export default function About() {
         a new angle.
       </p>
     </div>
+    </motion.div>
   );
 }

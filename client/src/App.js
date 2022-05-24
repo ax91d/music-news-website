@@ -8,35 +8,54 @@ import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
 import Single from "./pages/single/Single";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./context/Context";
+import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
-  const {user} = useContext(Context);
+  const { user } = useContext(Context);
+  //const location = useLocation();
+  //location={location} key={location.pathname}
   return (
-    <Router>
-    <div style={{minHeight: "100vh",display: "flex",
-    flexDirection: "column"}}>
-      <TopBar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/register">{user ? <Home /> : <Register />}</Route>
-        <Route path="/login">{user ? <Home /> : <Login />}</Route>
-        <Route path="/write">{user ? <Write /> : <Login />}</Route>
-        <Route path="/settings">{user ? <Settings /> : <Login />}</Route>
-        <Route path="/contact"><Contact/></Route>
-        <Route path="/about"><About/></Route>
-        <Route path="/post/:postId">
-          <Single />
-        </Route>
-      </Switch>
-      <Footer/>
-      </div>
-
-    </Router>
+    <AnimatePresence exitBeforeEnter>
+      <Router>
+        <div
+          style={{
+            minHeight: "100vh",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <TopBar />
+          <Switch >
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/register">{user ? <Home /> : <Register />}</Route>
+            <Route path="/login">{user ? <Home /> : <Login />}</Route>
+            <Route path="/write">{user ? <Write /> : <Login />}</Route>
+            <Route path="/settings">{user ? <Settings /> : <Login />}</Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/post/:postId">
+              <Single />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+    </AnimatePresence>
   );
 }
 

@@ -1,7 +1,7 @@
 .contact-wrap{
     width: 800px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 100px;
     border-radius: 20px;
     padding: 40px;
     background-color: #FDFBFB;
@@ -25,11 +25,29 @@
 }
 
 .contact-text::first-letter{
-    margin-left: 30px;
+    
     font-size: 23px;
 }
 
 .contact-text > a{
     text-decoration: none;
     color: rgb(66, 186, 255)
+}
+
+
+@media screen and (max-width:900px) {
+    .contact-wrap{
+        width: 280px;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    
+    .contact-text{
+        font-size: 10px;
+    }
+
+    .contact-text::first-letter{
+        
+        font-size: 12px;
+    }
 }

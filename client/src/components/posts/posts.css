@@ -1,6 +1,20 @@
 .posts{
     flex: 9;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 20px;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 0){
+    .post {
+        width: 100%;
+    }
+    .postImg{
+        width: 100%;
+    }
+
+    .sidebar{
+        display: none;
+    }
 }

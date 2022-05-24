@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("https://ca-times.brightspotcdn.com/dims4/default/cbff217/2147483647/strip/true/crop/3000x1997+0+0/resize/1486x989!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F83%2F39%2F993dc8cc4f85a898b034c7ee1c15%2Fla-ca-cell-phones-concert-0035.JPG");
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("../../img/login.jpeg");
     background-size: cover;
 }
 
@@ -53,4 +53,27 @@
     padding: 10px;
     color:white;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .loginTitle{
+        font-size: 80px;
+    }
+
+    .loginRegisterButton{
+        top: 90px;
+        right: 20px;
+        font-size: 20px;
+    }
+
+    .loginButton {
+        font-size: 20px;
+    }
+
+    .loginInput{
+        font-size: 20px;
+    }
+    .loginForm > label {
+        font-size: 30px;
+    }
 }

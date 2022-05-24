@@ -25,7 +25,39 @@
 
 .headerImg{
     width: 100%;
-    height: 450px;
+    height: 400px;
     margin-top: 80px;
     object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        display: none;
+    }
+    .headerTitleSm{
+        display: none;
+    }
+    
+    .headerTitleLg{
+        display:none
+    }
+
+    .headerImg{
+        width: 100%;
+        height: 250px;
+        margin-top: 45px;
+        object-fit: cover;
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .headerImg{
+        width: 100%;
+        height: 150px;
+        margin-top: 60px;
+        object-fit: cover;
+    }
 }

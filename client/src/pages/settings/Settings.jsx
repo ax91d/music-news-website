@@ -3,6 +3,8 @@ import { Context } from "../../context/Context";
 import Sidebar from "../../components/sidebar/Sidebar";
 import axios from "axios";
 import "./settings.css";
+import {AnimatePresence, motion } from "framer-motion";
+
 
 export default function Settings() {
   const [file, setFile] = useState(null);
@@ -43,6 +45,12 @@ export default function Settings() {
   };
 
   return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
     <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsTitle">
@@ -80,5 +88,6 @@ export default function Settings() {
       </div>
       <Sidebar />
     </div>
+    </motion.div>
   );
 }

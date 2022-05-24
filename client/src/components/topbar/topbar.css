@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
 .top{
     width: 100%;
     height: 50px;
@@ -42,13 +44,19 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    transition: 0.1s;
 }
 
 .topListItem{
     margin-right: 20px;
     font-size: 18px;
     font-weight: 300;
-    cursor: pointer
+    cursor: pointer;
+    transition: 0.5ms;
+}
+
+.topListItem>.link{
+    color: black;
 }
 
 .topSearchIcon {
@@ -56,4 +64,148 @@
     color:#666;
     cursor: pointer;
     margin-left: 15px;
+}
+
+.main-icon{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+ #menu-btn,
+ #menu-cancel{
+    color:white;
+    font-size: 30px;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    align-self: flex-end;
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+.main-icon, .main-title{
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .top{
+        flex-direction: column;
+        background-color: #444;
+        height: 70px;
+    }
+
+    .main-icon{
+        display: block;
+        color:white;
+        font-size: 40px;
+        position: absolute;
+        top: 15px;
+        left: 30px;
+    }
+
+    .main-title{
+        position: absolute;
+        top: 15px;
+        left:80px;  
+        color:white;
+        display: block;
+        font-family: 'Caveat', cursive;
+    }
+
+    .topCenter{
+        width: 100%;
+    }
+
+    .topList {
+        flex-direction: column;
+        color: white;
+        background-color: rgb(52, 52, 52);
+        position: absolute;
+        top:70px;
+        left: -100%;
+        width: 100%;   
+    }
+
+    .topListItem{
+        margin: auto;
+        border: 1px solid;
+        width: 100%;
+        transition: 0.1s;
+    }
+
+    .topListItem>.link{
+        width: 100%;
+        display: block;
+        text-align: center;
+        line-height: 8;
+        color:white;
+    }
+
+    .logout{
+        line-height: 5;
+        text-align: center;
+    }
+
+    .topListItem:active ~ .topCenter>ul{
+        left: -100;
+    }
+    
+
+    .topListItem>.link:hover{
+        background-color: black;
+    }
+
+    .topIcon{
+        font-size: 10px;
+        color:white;
+    }
+
+    .topImg {
+        width: 25px;
+        height: 25px;
+    }
+    .topSearchIcon {
+        display: none;
+    }
+
+    .topRight, .topLeft{
+       display: none;
+    }
+
+
+    label #menu-btn {
+        display: block;
+    }
+    label #menu-cancel{
+        display: none;
+    }
+
+    #check:checked ~ .topCenter>ul{
+        left: 0;
+    }
+    #check:checked ~ label #menu-btn{
+        display: none;
+    }
+
+    #check:checked ~ label #menu-cancel{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .topIcon{
+        font-size: 8px;
+    }
+    .topImg {
+        width: 15px;
+        height: 15px;
+    }
+    .topSearchIcon {
+        font-size: 10px;
+    }
 }

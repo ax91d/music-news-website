@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./register.css";
+import {AnimatePresence, motion } from "framer-motion";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -25,6 +26,12 @@ export default function Register() {
   };
 
   return (
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.5 }}
+  >
     <div className="register">
       <span className="registerTitle">Register</span>
       <form className="registerForm" onSubmit={handleSubmit}>
@@ -60,5 +67,6 @@ export default function Register() {
       </button>
       {error && <span style={{color: "red", marginTop: "10px"}}>Something Wen Wrong</span>}
     </div>
+    </motion.div>
   );
 }

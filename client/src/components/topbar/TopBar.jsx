@@ -8,9 +8,27 @@ export default function TopBar() {
   const PF = "http://localhost:5000/images/";
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
+    document.getElementById('check').checked = false;
   };
+
+  const toggle = () => {
+    document.getElementById('check').checked = false;
+  }
+
   return (
     <div className="top">
+    <Link to="/">
+    <label htmlFor="" className="main-title-lable">
+      <h1 className="main-title">  Strings & Rhymes </h1>
+      <i className="main-icon fa-solid fa-guitar"></i>
+    </label>
+    </Link>
+    <input type="checkbox" id="check"/>
+    <label htmlFor="check">
+          <i className="fa-solid fa-bars" id="menu-btn"></i>
+          <i className="fa-solid fa-xmark" id="menu-cancel"></i>
+      </label>
+      
       <div className="topLeft">
         <i className="topIcon fa-brands fa-facebook-square"></i>
         <i className="topIcon fa-brands fa-twitter-square"></i>
@@ -20,34 +38,34 @@ export default function TopBar() {
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link to="/" className="link">
+            <Link to="/" className="link" onClick={toggle}>
               HOME
             </Link>
           </li>
-          <li className="topListItem">
+          <li className="topListItem" onClick={toggle}>
             <Link to="/about" className="link">
               ABOUT
             </Link>
           </li>
-          <li className="topListItem">
+          <li className="topListItem" onClick={toggle}>
             <Link to="/contact" className="link">
               CONTACT
             </Link>
           </li>
-          <li className="topListItem">
+          <li className="topListItem" onClick={toggle}>
             <Link to="/write" className="link">
               WRITE
             </Link>
           </li>
-          <li className="topListItem" onClick={handleLogout}>
+          <li className="topListItem logout" onClick={handleLogout}>
             {user && "LOG OUT"}
           </li>
         </ul>
       </div>
       <div className="topRight">
         {user ? (
-      <Link to="/settings">
-          <img className="topImg" src={PF+user.profilePic} alt="" />
+          <Link to="/settings">
+            <img className="topImg" src={PF + user.profilePic} alt="" />
           </Link>
         ) : (
           <ul className="topList">
@@ -63,8 +81,6 @@ export default function TopBar() {
             </li>
           </ul>
         )}
-
-        <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
   );

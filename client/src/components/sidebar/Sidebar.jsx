@@ -17,7 +17,7 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://i.scdn.co/image/ab6761610000e5eb0721a0eb3b04c76895b53a8d"
+          src={require("../../img/blink.jpeg")}
           alt=""
         />
         <p>

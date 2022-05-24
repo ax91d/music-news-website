@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./post.css";
+import { motion } from "framer-motion";
 
 export default function Post({ post }) {
   const PF = "http://localhost:5000/images/";

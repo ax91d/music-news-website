@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import axios from "axios";
 import "./login.css";
+import {AnimatePresence, motion } from "framer-motion";
+
 
 export default function Login() {
   const userRef = useRef();
@@ -24,6 +26,12 @@ export default function Login() {
   }
 
   return (
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.5 }}
+  >
     <div className="login">
       <span className="loginTitle">Login</span>
       <form className="loginForm" onSubmit={handleSubmit}>
@@ -47,5 +55,6 @@ export default function Login() {
         <Link to="/register" className="link">REGISTER</Link>
       </button>
     </div>
+    </motion.div>
   );
 }

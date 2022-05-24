@@ -11,7 +11,7 @@ export default function Header() {
       
       <img
         className="headerImg"
-        src="https://guitar.com/wp-content/uploads/2021/10/Angels-Airwaves-Credit-Kevin-Trout-9@2160x1215.jpg"
+        src={require("../../img/ava.jpeg")}
         alt=""
       />
       

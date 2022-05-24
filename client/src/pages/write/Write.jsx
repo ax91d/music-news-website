@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import axios from "axios";
 import { Context } from "../../context/Context";
 import "./write.css";
+import {AnimatePresence, motion } from "framer-motion";
 
 export default function Write() {
   const [title, setTitle] = useState("");
@@ -34,6 +35,11 @@ export default function Write() {
   };
 
   return (
+    <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
     <div className="write">
       {file && (
         <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
@@ -70,5 +76,6 @@ export default function Write() {
         </button>
       </form>
     </div>
+    </motion.div>
   );
 }
